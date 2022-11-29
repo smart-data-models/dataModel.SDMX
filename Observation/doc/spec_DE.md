@@ -7,17 +7,20 @@
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+Globale Beschreibung: **Eine einzelne Beobachtung im SDMX-Würfel, die einen oder mehrere zugehörige Messwerte haben kann**  
+Version: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-<!-- /30-PropertiesList -->  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `confStatus[string]`: Vertraulichkeitsstatus (CONF_STATUS). Diese Codeliste liefert kodierte Informationen über die Sensibilität und den Vertraulichkeitsstatus der Daten. Die verschiedenen Werte sind in der Codeliste Vertraulichkeitsstatus v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx) definiert  . Model: [http://purl.org/linked-data/sdmx/2009/code#confStatus](http://purl.org/linked-data/sdmx/2009/code#confStatus)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dataset[string]`: Stellt eine Sammlung von Beobachtungen dar, die einer gemeinsamen dimensionalen Struktur entsprechen.  . Model: [http://purl.org/linked-data/cube#Dataset](http://purl.org/linked-data/cube#Dataset)- `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `decimals[number]`: Geben Sie eine Liste von Werten an, die die Anzahl der in den Daten verwendeten Dezimalziffern angeben. Die verschiedenen Werte sind in der Codeliste Dezimalstellen v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx) definiert.  . Model: [http://purl.org/linked-data/sdmx/2009/code#decimals](http://purl.org/linked-data/sdmx/2009/code#decimals)- `description[string]`: Eine Beschreibung dieses Artikels  - `dimensions[array]`: Diese Eigenschaft enthält die Liste der Dimensionen, die durch ihren Schlüssel und Wert identifiziert werden.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `freq[string]`: Diese Codeliste enthält eine Reihe von Werten, die die "Häufigkeit" der Daten angeben (z. B. wöchentlich, monatlich, vierteljährlich). Der Begriff "Häufigkeit" kann sich auf verschiedene Stufen des Produktionsprozesses beziehen, z. B. auf die Datenerhebung oder die Datenverbreitung. So könnte beispielsweise eine Zeitreihe mit jährlicher Frequenz verbreitet werden, die zugrunde liegenden Daten werden jedoch monatlich erstellt. Die Codeliste ist für alle unterschiedlichen Verwendungen von "Häufigkeit" anwendbar. Die verschiedenen Werte werden auf der Grundlage des Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_FREQ-2.1_February_2021.docx) definiert  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#freq](http://purl.org/linked-data/sdmx/2009/dimension#freq)- `id[*]`: Eindeutiger Bezeichner der Entität  - `identifier[string]`: Diese Eigenschaft enthält einen Namen, der dem Dataset gegeben wird.  . Model: [dct:identifier](dct:identifier)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `obsStatus[string]`: Diese Codeliste enthält kodierte Informationen über den Status einer Beobachtung (in Bezug auf Ereignisse, wie sie in den Codes der Codeliste enthalten sind). Die verschiedenen Werte sind in der Codeliste Beobachtungsstatus v2.2 (https://sdmx.org/wp-content/uploads/CL_OBS_STATUS_v2_2.docx) definiert  . Model: [http://purl.org/linked-data/sdmx/2009/code#obsStatus](http://purl.org/linked-data/sdmx/2009/code#obsStatus)- `obsValue[*]`: Der Wert einer bestimmten Variablen zu einem bestimmten Zeitpunkt.  . Model: [http://purl.org/linked-data/sdmx/2009/measure#obsValue](http://purl.org/linked-data/sdmx/2009/measure#obsValue)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refArea[string]`: Das Land oder geografische Gebiet, auf das sich das gemessene statistische Phänomen bezieht. Die verschiedenen Werte werden auf der Grundlage des Referenzgebiets v2.0 definiert (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#refArea](http://purl.org/linked-data/sdmx/2009/dimension#refArea)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `timePeriod[string]`: Der Zeitraum oder Zeitpunkt, auf den sich die gemessene Beobachtung bezieht. Die durch jede Beobachtung dargestellte Messung entspricht einem bestimmten Zeitpunkt (z. B. einem einzelnen Tag) oder einem Zeitraum (z. B. einem Monat, einem Steuerjahr oder einem Kalenderjahr). Dies wird als Zeitstempel verwendet und ist für Zeitreihendaten von besonderer Bedeutung. In Fällen, in denen der tatsächliche Zeitraum der Daten vom Soll-Bezugszeitraum abweicht, bezieht sich "Zeitraum" auf den tatsächlichen Zeitraum.  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#timePeriod](http://purl.org/linked-data/sdmx/2009/dimension#timePeriod)- `title[string]`: Diese Eigenschaft enthält den Hauptbezeichner für die Beobachtung, den URI.  . Model: [dct:title](dct:title)- `type[string]`: NGSI-Entitätstyp. Es muss Beobachtung sein  - `unitMult[number]`: Geben Sie Codewerte für die Angabe der Größenordnung in den Maßeinheiten an. In wissenschaftlicher Notation ausgedrückt als Zehnerpotenz der Zahl. Die verschiedenen Werte sind in Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx) definiert  . Model: [http://purl.org/linked-data/sdmx/2009/code#unitMult](http://purl.org/linked-data/sdmx/2009/code#unitMult)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- Keine erforderlichen Eigenschaften  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+Dieses Datenmodell wurde erstellt, um die Umwandlung von SDMX-IM-Beobachtungen, die in RDF Turtle dargestellt sind, in das JSON-LD-Format zu ermöglichen, damit sie von den ETSI NGSI-LD-Brokern genutzt werden können.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
@@ -445,13 +448,366 @@ Observation:
 ## Beispiel-Nutzlasten  
 #### Beobachtung NGSI-v2 Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Beobachtung im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "identifier": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "dataSet": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002",  
+  "confStatus": "F",  
+  "decimals": 1,  
+  "obsStatus": "A",  
+  "unitMult": 6,  
+  "freq": "A",  
+  "refArea": "BE",  
+  "timePeriod": "2012",  
+  "obsValue": 3016.9,  
+  "dimensions": [  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+      "value": "urn:ngsi-ld:Concept:N"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+      "value": "W2"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+      "value": "B"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+      "value": "B1G"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+      "value": "A"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+      "value": "XDC"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+      "value": "V"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+      "value": "N"  
+    }  
+  ]  
+}  
+```  
+</details>  
 #### Beobachtung NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine Beobachtung im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": {  
+    "type": "Text",  
+    "value": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "identifier": {  
+    "type": "Text",  
+    "value": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "dataSet": {  
+    "type": "Text",  
+    "value": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002"  
+  },  
+  "confStatus": {  
+    "type": "Text",  
+    "value": "F"  
+  },  
+  "decimals": {  
+    "type": "Number",  
+    "value": 1  
+  },  
+  "obsStatus": {  
+    "type": "Text",  
+    "value": "A"  
+  },  
+  "unitMult": {  
+    "type": "Number",  
+    "value": 6  
+  },  
+  "freq": {  
+    "type": "Text",  
+    "value": "A"  
+  },  
+  "refArea": {  
+    "type": "Text",  
+    "value": "BE"  
+  },  
+  "timePeriod": {  
+    "type": "Text",  
+    "value": "2012"  
+  },  
+  "obsValue": {  
+    "type": "Number",  
+    "value": 3016.9  
+  },  
+  "dimensions": {  
+    "type": "array",  
+    "value": [  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+        "value": "urn:ngsi-ld:Concept:N"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+        "value": "W2"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+        "value": "B"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+        "value": "B1G"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+        "value": "A"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+        "value": "XDC"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+        "value": "V"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+        "value": "N"  
+      }  
+    ]  
+  }  
+}  
+```  
+</details>  
 #### Beobachtung NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Beobachtung im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "identifier": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "dataSet": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002",  
+  "confStatus": "F",  
+  "decimals": 1,  
+  "obsStatus": "A",  
+  "unitMult": 6,  
+  "freq": "A",  
+  "refArea": "BE",  
+  "timePeriod": "2012",  
+  "obsValue": 3016.9,  
+  "dimensions": [  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+      "value": "urn:ngsi-ld:Concept:N"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+      "value": "W2"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+      "value": "B"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+      "value": "B1G"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+      "value": "A"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+      "value": "XDC"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+      "value": "V"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+      "value": "N"  
+    }  
+  ],  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SDMX/master/context.jsonld"  
+  ]  
+}  
+```  
+</details>  
 #### Beobachtung NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine Beobachtung im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
-<!-- /80-Examples -->  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": {  
+    "type": "Property",  
+    "value": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "identifier": {  
+    "type": "Property",  
+    "value": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "dataSet": {  
+    "type": "Property",  
+    "object": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002"  
+  },  
+  "confStatus": {  
+    "type": "Property",  
+    "value": "F"  
+  },  
+  "decimals": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "obsStatus": {  
+    "type": "Property",  
+    "value": "A"  
+  },  
+  "unitMult": {  
+    "type": "Property",  
+    "value": 6  
+  },  
+  "freq": {  
+    "type": "Property",  
+    "value": "A"  
+  },  
+  "refArea": {  
+    "type": "Property",  
+    "value": "BE"  
+  },  
+  "timePeriod": {  
+    "type": "Property",  
+    "value": "2012"  
+  },  
+  "obsValue": {  
+    "type": "Property",  
+    "value": 3016.9  
+  },  
+  "dimensions": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+        "value": "urn:ngsi-ld:Concept:N"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+        "value": "W2"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+        "value": "B"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+        "value": "B1G"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+        "value": "A"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+        "value": "XDC"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+        "value": "V"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+        "value": "N"  
+      }  
+    ]  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SDMX/master/context.jsonld"  
+  ]  
+}  
+```  
+</details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
