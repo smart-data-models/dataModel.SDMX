@@ -7,17 +7,20 @@
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+Descripción global: **Una sola observación en el Cubo SDMX, puede tener uno o más valores medidos asociados**  
+versión: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
 <sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-<!-- /30-PropertiesList -->  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `confStatus[string]`: Estado de confidencialidad (CONF_STATUS). Esta lista de códigos proporciona información codificada sobre el estado de sensibilidad y confidencialidad de los datos. Los diferentes valores se definen en la Lista de códigos de estado de confidencialidad v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#confStatus](http://purl.org/linked-data/sdmx/2009/code#confStatus)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dataset[string]`: Representa una colección de observaciones que se ajustan a una estructura dimensional común.  . Model: [http://purl.org/linked-data/cube#Dataset](http://purl.org/linked-data/cube#Dataset)- `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `decimals[number]`: Proporciona una lista de valores que muestra el número de dígitos decimales utilizados en los datos. Los diferentes valores se definen en la lista de códigos decimales v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#decimals](http://purl.org/linked-data/sdmx/2009/code#decimals)- `description[string]`: Una descripción de este artículo  - `dimensions[array]`: Esta propiedad contiene la lista de dimensiones identificadas por su clave y valor.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `freq[string]`: Esta lista de códigos proporciona un conjunto de valores que indican la "frecuencia" de los datos (por ejemplo, semanal, mensual, trimestral). El concepto "frecuencia" puede referirse a varias etapas del proceso de producción, por ejemplo, la recopilación de datos o la difusión de los mismos. Por ejemplo, una serie temporal podría difundirse con una frecuencia anual, pero los datos subyacentes se recopilan mensualmente. La lista de códigos es aplicable a todos los diferentes usos de "frecuencia". Los diferentes valores se definen en el multiplicador de unidades v1.1 (https://sdmx.org/wp-content/uploads/CL_FREQ-2.1_February_2021.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#freq](http://purl.org/linked-data/sdmx/2009/dimension#freq)- `id[*]`: Identificador único de la entidad  - `identifier[string]`: Esta propiedad contiene un nombre dado al Dataset.  . Model: [dct:identifier](dct:identifier)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `obsStatus[string]`: Esta lista de códigos proporciona información codificada sobre el estado de una observación (con respecto a eventos como los reflejados en los códigos que componen la lista de códigos). Los diferentes valores se definen en la Lista de Códigos de Estado de Observación v2.2 (https://sdmx.org/wp-content/uploads/CL_OBS_STATUS_v2_2.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#obsStatus](http://purl.org/linked-data/sdmx/2009/code#obsStatus)- `obsValue[*]`: El valor de una variable concreta en un periodo determinado.  . Model: [http://purl.org/linked-data/sdmx/2009/measure#obsValue](http://purl.org/linked-data/sdmx/2009/measure#obsValue)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refArea[string]`: El país o la zona geográfica a la que se refiere el fenómeno estadístico medido. Los diferentes valores se definen con base en Reference Area v2.0 (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#refArea](http://purl.org/linked-data/sdmx/2009/dimension#refArea)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `timePeriod[string]`: El periodo de tiempo o punto en el tiempo al que se refiere la observación medida. La medición representada por cada observación corresponde a un punto específico en el tiempo (por ejemplo, un solo día) o a un período (por ejemplo, un mes, un año fiscal o un año natural). Esto se utiliza como un sello de tiempo y es de particular importancia para los datos de series temporales. En los casos en los que el periodo de tiempo real de los datos difiere del periodo de referencia objetivo, "periodo de tiempo" se refiere al periodo real.  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#timePeriod](http://purl.org/linked-data/sdmx/2009/dimension#timePeriod)- `title[string]`: Esta propiedad contiene el identificador principal de la Observación, el URI.  . Model: [dct:title](dct:title)- `type[string]`: Tipo de entidad NGSI. Tiene que ser Observación  - `unitMult[number]`: Proporcionar valores de código para indicar la magnitud en las unidades de medida. En notación científica, se expresa como diez elevado a la potencia del número. Los diferentes valores se definen en base a Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#unitMult](http://purl.org/linked-data/sdmx/2009/code#unitMult)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- No hay propiedades requeridas  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+Este modelo de datos se ha generado para permitir la transformación de la Observación SDMX-IM representada en RDF Turtle en formato JSON-LD para ser consumida por los brokers ETSI NGSI-LD.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
@@ -445,13 +448,366 @@ Observation:
 ## Ejemplo de carga útil  
 #### Observación NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de una Observación en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "identifier": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "dataSet": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002",  
+  "confStatus": "F",  
+  "decimals": 1,  
+  "obsStatus": "A",  
+  "unitMult": 6,  
+  "freq": "A",  
+  "refArea": "BE",  
+  "timePeriod": "2012",  
+  "obsValue": 3016.9,  
+  "dimensions": [  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+      "value": "urn:ngsi-ld:Concept:N"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+      "value": "W2"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+      "value": "B"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+      "value": "B1G"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+      "value": "A"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+      "value": "XDC"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+      "value": "V"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+      "value": "N"  
+    }  
+  ]  
+}  
+```  
+</details>  
 #### Observación NGSI-v2 normalizada Ejemplo  
 Aquí hay un ejemplo de una Observación en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": {  
+    "type": "Text",  
+    "value": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "identifier": {  
+    "type": "Text",  
+    "value": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "dataSet": {  
+    "type": "Text",  
+    "value": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002"  
+  },  
+  "confStatus": {  
+    "type": "Text",  
+    "value": "F"  
+  },  
+  "decimals": {  
+    "type": "Number",  
+    "value": 1  
+  },  
+  "obsStatus": {  
+    "type": "Text",  
+    "value": "A"  
+  },  
+  "unitMult": {  
+    "type": "Number",  
+    "value": 6  
+  },  
+  "freq": {  
+    "type": "Text",  
+    "value": "A"  
+  },  
+  "refArea": {  
+    "type": "Text",  
+    "value": "BE"  
+  },  
+  "timePeriod": {  
+    "type": "Text",  
+    "value": "2012"  
+  },  
+  "obsValue": {  
+    "type": "Number",  
+    "value": 3016.9  
+  },  
+  "dimensions": {  
+    "type": "array",  
+    "value": [  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+        "value": "urn:ngsi-ld:Concept:N"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+        "value": "W2"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+        "value": "B"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+        "value": "B1G"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+        "value": "A"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+        "value": "XDC"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+        "value": "V"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+        "value": "N"  
+      }  
+    ]  
+  }  
+}  
+```  
+</details>  
 #### Observación NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de una Observación en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "identifier": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "dataSet": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002",  
+  "confStatus": "F",  
+  "decimals": 1,  
+  "obsStatus": "A",  
+  "unitMult": 6,  
+  "freq": "A",  
+  "refArea": "BE",  
+  "timePeriod": "2012",  
+  "obsValue": 3016.9,  
+  "dimensions": [  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+      "value": "urn:ngsi-ld:Concept:N"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+      "value": "W2"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+      "value": "S1"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+      "value": "B"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+      "value": "B1G"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+      "value": "A"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+      "value": "_Z"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+      "value": "XDC"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+      "value": "V"  
+    },  
+    {  
+      "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+      "value": "N"  
+    }  
+  ],  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SDMX/master/context.jsonld"  
+  ]  
+}  
+```  
+</details>  
 #### Observación NGSI-LD normalizada Ejemplo  
 He aquí un ejemplo de una Observación en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-<!-- /80-Examples -->  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",  
+  "type": "Observation",  
+  "title": {  
+    "type": "Property",  
+    "value": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "identifier": {  
+    "type": "Property",  
+    "value": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"  
+  },  
+  "dataSet": {  
+    "type": "Property",  
+    "object": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002"  
+  },  
+  "confStatus": {  
+    "type": "Property",  
+    "value": "F"  
+  },  
+  "decimals": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "obsStatus": {  
+    "type": "Property",  
+    "value": "A"  
+  },  
+  "unitMult": {  
+    "type": "Property",  
+    "value": 6  
+  },  
+  "freq": {  
+    "type": "Property",  
+    "value": "A"  
+  },  
+  "refArea": {  
+    "type": "Property",  
+    "value": "BE"  
+  },  
+  "timePeriod": {  
+    "type": "Property",  
+    "value": "2012"  
+  },  
+  "obsValue": {  
+    "type": "Property",  
+    "value": 3016.9  
+  },  
+  "dimensions": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3002",  
+        "value": "urn:ngsi-ld:Concept:N"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3004",  
+        "value": "W2"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3005",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3006",  
+        "value": "S1"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3007",  
+        "value": "B"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3008",  
+        "value": "B1G"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3009",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3010",  
+        "value": "A"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3011",  
+        "value": "_Z"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3012",  
+        "value": "XDC"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3013",  
+        "value": "V"  
+      },  
+      {  
+        "key": "urn:ngsi-ld:DimensionProperty:d3014",  
+        "value": "N"  
+      }  
+    ]  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SDMX/master/context.jsonld"  
+  ]  
+}  
+```  
+</details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
