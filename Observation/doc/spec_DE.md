@@ -41,6 +41,9 @@ Observation:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -67,6 +70,25 @@ Observation:
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
+    confStatus:    
+      description: 'Confidentiality Status (CONF_STATUS). This code list provides coded information about the sensitivity and confidentiality status of the data. The different values are defined based in Code List Confidentially Status v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)'    
+      enum:    
+        - F    
+        - N    
+        - C    
+        - D    
+        - S    
+        - A    
+        - O    
+        - T    
+        - G    
+        - M    
+        - E    
+        - P    
+      type: string    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/code#confStatus"    
         type: Property    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity.    
@@ -100,6 +122,14 @@ Observation:
       type: string    
       x-ngsi:    
         type: Property    
+    decimals:    
+      description: 'Provide a list of values showing the number of decimal digits used in the data. The different values are defined based in Code List Decimals v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)'    
+      maximum: 15    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/code#decimals"    
+        type: Property    
     description:    
       description: A description of this item    
       type: string    
@@ -117,6 +147,13 @@ Observation:
       type: array    
       x-ngsi:    
         model: https://schema.org/StructuredValue    
+        type: Property    
+    freq:    
+      description: 'This code list provides a set of values indicating the ''frequency'' of the data (e.g. weekly, monthly, quarterly). The concept “frequency” may refer to various stages in the production process, e.g. data collection or data dissemination. For example, a time series could be disseminated at annual frequency, but the underlying data are compiled monthly. The code list is applicable for all different uses of “frequency”. The different values are defined based in Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_FREQ-2.1_February_2021.docx)'    
+      pattern: ^_[OUZ]|[SQBNI]|OA|OM|[AMWDH]_*[0-9]*$    
+      type: string    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/dimension#freq"    
         type: Property    
     id:    
       anyOf: &observation_-_properties_-_owner_-_items_-_anyof    
@@ -295,6 +332,41 @@ Observation:
       type: string    
       x-ngsi:    
         type: Property    
+    obsStatus:    
+      description: 'This code list provides coded information about the status of an observation (with respect events such as the ones reflected in the codes composing the code list). The different values are defined based in Code List Observation Status v2.2 (https://sdmx.org/wp-content/uploads/CL_OBS_STATUS_v2_2.docx)'    
+      enum:    
+        - A    
+        - B    
+        - D    
+        - E    
+        - F    
+        - G    
+        - I    
+        - K    
+        - W    
+        - O    
+        - M    
+        - P    
+        - S    
+        - L    
+        - H    
+        - Q    
+        - J    
+        - N    
+        - U    
+        - V    
+      type: string    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/code#obsStatus"    
+        type: Property    
+    obsValue:    
+      description: The value of a particular variable at a particular period.    
+      oneOf:    
+        - type: string    
+        - type: number    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/measure#obsValue"    
+        type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
@@ -302,6 +374,12 @@ Observation:
         description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
+        type: Property    
+    refArea:    
+      description: 'The country or geographic area to which the measured statistical phenomenon relates. The different values are defined based in Reference Area v2.0 (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)'    
+      type: string    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/dimension#refArea"    
         type: Property    
     seeAlso:    
       description: list of uri pointing to additional resources about the item    
@@ -320,6 +398,12 @@ Observation:
       type: string    
       x-ngsi:    
         type: Property    
+    timePeriod:    
+      description: 'The period of time or point in time to which the measured observation refers. The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, “time period” refers to the actual period.'    
+      type: string    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod"    
+        type: Property    
     title:    
       description: 'This property contains the main identifier for the Observation, the URI.'    
       format: uri    
@@ -333,6 +417,14 @@ Observation:
         - Observation    
       type: string    
       x-ngsi:    
+        type: Property    
+    unitMult:    
+      description: 'Provide code values for indicating the magnitude in the units of measurements. In scientific notation, expressed as ten raised to the power of the number. The different values are defined based in Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx)'    
+      maximum: 13    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: "http://purl.org/linked-data/sdmx/2009/code#unitMult"    
         type: Property    
   required:    
     - id    
