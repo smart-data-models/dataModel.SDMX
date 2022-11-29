@@ -54,12 +54,28 @@
             "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
         },
         {
+            "name": "decimals",
+            "writable": true,
+            "displayName": "decimals",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Provide a list of values showing the number of decimal digits used in the data. The different values are defined based in Code List Decimals v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)"
+        },
+        {
             "name": "description",
             "writable": true,
             "displayName": "description",
             "@type": "Property",
             "schema": "string",
             "comment": "A description of this item"
+        },
+        {
+            "name": "freq",
+            "writable": true,
+            "displayName": "freq",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "This code list provides a set of values indicating the 'frequency' of the data (e.g. weekly, monthly, quarterly). The concept \u201cfrequency\u201d may refer to various stages in the production process, e.g. data collection or data dissemination. For example, a time series could be disseminated at annual frequency, but the underlying data are compiled monthly. The code list is applicable for all different uses of \u201cfrequency\u201d. The different values are defined based in Unit Multiplier v1.1 (https://sdmx.org/wp-content/"
         },
         {
             "name": "identifier",
@@ -78,6 +94,19 @@
             "comment": "The name of this item."
         },
         {
+            "name": "obsValue",
+            "writable": true,
+            "displayName": "obsValue"
+        },
+        {
+            "name": "refArea",
+            "writable": true,
+            "displayName": "refArea",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The country or geographic area to which the measured statistical phenomenon relates. The different values are defined based in Reference Area v2.0 (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)"
+        },
+        {
             "name": "seeAlso",
             "writable": true,
             "displayName": "seeAlso"
@@ -91,12 +120,28 @@
             "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
         },
         {
+            "name": "timePeriod",
+            "writable": true,
+            "displayName": "timePeriod",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The period of time or point in time to which the measured observation refers. The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, \u201ctime period\u201d refers to the actual period."
+        },
+        {
             "name": "title",
             "writable": true,
             "displayName": "title",
             "@type": "Property",
             "schema": "string",
             "comment": "This property contains the main identifier for the Observation, the URI."
+        },
+        {
+            "name": "unitMult",
+            "writable": true,
+            "displayName": "unitMult",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Provide code values for indicating the magnitude in the units of measurements. In scientific notation, expressed as ten raised to the power of the number. The different values are defined based in Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx)"
         },
         {
             "@type": "Telemetry",
@@ -134,6 +179,10 @@
                 },
                 {
                     "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
                     "schema": "string"
                 },
                 {
@@ -183,6 +232,186 @@
             "@type": "Telemetry",
             "name": "location_MultiPolygon",
             "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "confStatus",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "F",
+                        "displayName": "F",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "N",
+                        "displayName": "N",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "C",
+                        "displayName": "C",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "D",
+                        "displayName": "D",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "S",
+                        "displayName": "S",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "A",
+                        "displayName": "A",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "O",
+                        "displayName": "O",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "T",
+                        "displayName": "T",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "G",
+                        "displayName": "G",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "M",
+                        "displayName": "M",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "E",
+                        "displayName": "E",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "P",
+                        "displayName": "P",
+                        "enumValue": 12
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "obsStatus",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "A",
+                        "displayName": "A",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "B",
+                        "displayName": "B",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "D",
+                        "displayName": "D",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "E",
+                        "displayName": "E",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "F",
+                        "displayName": "F",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "G",
+                        "displayName": "G",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "I",
+                        "displayName": "I",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "K",
+                        "displayName": "K",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "W",
+                        "displayName": "W",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "O",
+                        "displayName": "O",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "M",
+                        "displayName": "M",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "P",
+                        "displayName": "P",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "S",
+                        "displayName": "S",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "L",
+                        "displayName": "L",
+                        "enumValue": 14
+                    },
+                    {
+                        "name": "H",
+                        "displayName": "H",
+                        "enumValue": 15
+                    },
+                    {
+                        "name": "Q",
+                        "displayName": "Q",
+                        "enumValue": 16
+                    },
+                    {
+                        "name": "J",
+                        "displayName": "J",
+                        "enumValue": 17
+                    },
+                    {
+                        "name": "N",
+                        "displayName": "N",
+                        "enumValue": 18
+                    },
+                    {
+                        "name": "U",
+                        "displayName": "U",
+                        "enumValue": 19
+                    },
+                    {
+                        "name": "V",
+                        "displayName": "V",
+                        "enumValue": 20
+                    }
+                ]
+            }
         }
     ]
 }
