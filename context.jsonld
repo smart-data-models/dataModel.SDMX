@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "address": "https://smartdatamodels.org/address",
+        "alternateName": "https://smartdatamodels.org/alternateName",
+        "areaServed": "https://smartdatamodels.org/areaServed",
+        "dataProvider": "https://smartdatamodels.org/dataProvider",
+        "dataset": "qd:dataSet",
+        "dateCreated": "https://smartdatamodels.org/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dateModified",
+        "description": "http://purl.org/dc/terms/description",
+        "dimensions": "https://smartdatamodels.org/dataModel.SDMX/dimensions",
+        "id": "@id",
+        "identifier": "dct:identifier",
+        "location": "ngsi-ld:location",
+        "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "owner": "https://smartdatamodels.org/owner",
+        "seeAlso": "https://smartdatamodels.org/seeAlso",
+        "source": "https://smartdatamodels.org/source",
+        "title": "http://purl.org/dc/terms/title",
+        "type": "@type"
+    }
+}
