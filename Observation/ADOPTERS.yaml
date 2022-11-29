@@ -1,0 +1,10 @@
+description: This is a compilation list of the current adopters of the data model Dataset of the Subject dataModel.SDMX.
+currentAdopters:
+-
+ adopter: INTERSTAT Project
+ description:
+ mail:
+ organization:
+ project:  https://cef-interstat.eu/
+ comments: Adaptation of the SDMX standard to STAT-DCAT-AP 1.0.1
+ startDate: 2022-11-24

@@ -1,0 +1,101 @@
+{
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",
+  "type": "Observation",
+  "title": {
+    "type": "Text",
+    "value": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"
+  },
+  "identifier": {
+    "type": "Text",
+    "value": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"
+  },
+  "dataSet": {
+    "type": "Text",
+    "value": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002"
+  },
+  "confStatus": {
+    "type": "Text",
+    "value": "F"
+  },
+  "decimals": {
+    "type": "Number",
+    "value": 1
+  },
+  "obsStatus": {
+    "type": "Text",
+    "value": "A"
+  },
+  "unitMult": {
+    "type": "Number",
+    "value": 6
+  },
+  "freq": {
+    "type": "Text",
+    "value": "A"
+  },
+  "refArea": {
+    "type": "Text",
+    "value": "BE"
+  },
+  "timePeriod": {
+    "type": "Text",
+    "value": "2012"
+  },
+  "obsValue": {
+    "type": "Number",
+    "value": 3016.9
+  },
+  "dimensions": {
+    "type": "array",
+    "value": [
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3002",
+        "value": "urn:ngsi-ld:Concept:N"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3004",
+        "value": "W2"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3005",
+        "value": "S1"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3006",
+        "value": "S1"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3007",
+        "value": "B"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3008",
+        "value": "B1G"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3009",
+        "value": "_Z"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3010",
+        "value": "A"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3011",
+        "value": "_Z"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3012",
+        "value": "XDC"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3013",
+        "value": "V"
+      },
+      {
+        "key": "urn:ngsi-ld:DimensionProperty:d3014",
+        "value": "N"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "dct": "http://purl.org/dc/terms/",
+  "qb": "http://purl.org/linked-data/cube#",
+  "sdmx-dimension": "http://purl.org/linked-data/sdmx/2009/dimension#",
+  "sdmx-attribute": "http://purl.org/linked-data/sdmx/2009/attribute#",
+  "sdmx-measure": "http://purl.org/linked-data/sdmx/2009/measure#",
+  "title": "dct:title",
+  "identifier": "dct:identifier",
+  "dataset": "qd:dataSet",
+  "confStatus": "sdmx-attribute:confStatus",
+  "decimals": "sdmx-attribute:decimals",
+  "obsStatus":"sdmx-attribute:obsStatus",
+  "unitMult": "sdmx-attribute:unitMult",
+  "freq": "sdmx-dimension:freq",
+  "refArea": "sdmx-dimension:refArea",
+  "timePeriod": "sdmx-dimension:timePeriod",
+  "obsValue": "sdmx-measure:obsValue"
+}

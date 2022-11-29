@@ -1,0 +1,44 @@
+description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
+contributors:
+- name: Richard
+  surname: Cyganiak
+  mail: richard@cyganiak.de
+  organization: TopQuadrant
+  project:
+  comments:
+  year: 2013
+- name: Ian
+  surname: Dickinson
+  mail:
+  organization: Verna
+  project:
+  comments:
+  year: 2013
+- name: Arofan
+  surname: Gregory
+  mail: arofan.gregory@earthlink.net
+  organization:
+  project:
+  comments:
+  year: 2013
+- name: Fernando
+  surname: López
+  mail: fernando.lopez@fiware.org
+  organization: FIWARE Foundation
+  project: INTERSTAT
+  comments:
+  year: 2022
+- name: Dave
+  surname: Reynolds
+  mail: dave@epimorphics.com
+  organization: Epimorphics Ltd
+  project:
+  comments:
+  year: 2013
+- name: Jeni
+  surname: Tennison
+  mail: jeni@jenitennison.com
+  organization: Connected by Data
+  project:
+  comments:
+  year: 2013

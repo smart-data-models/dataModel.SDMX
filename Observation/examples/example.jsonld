@@ -1,0 +1,69 @@
+{
+  "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",
+  "type": "Observation",
+  "title": "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",
+  "identifier": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",
+  "dataSet": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002",
+  "confStatus": "F",
+  "decimals": 1,
+  "obsStatus": "A",
+  "unitMult": 6,
+  "freq": "A",
+  "refArea": "BE",
+  "timePeriod": "2012",
+  "obsValue": 3016.9,
+  "dimensions": [
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3002",
+      "value": "urn:ngsi-ld:Concept:N"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3004",
+      "value": "W2"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3005",
+      "value": "S1"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3006",
+      "value": "S1"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3007",
+      "value": "B"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3008",
+      "value": "B1G"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3009",
+      "value": "_Z"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3010",
+      "value": "A"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3011",
+      "value": "_Z"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3012",
+      "value": "XDC"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3013",
+      "value": "V"
+    },
+    {
+      "key": "urn:ngsi-ld:DimensionProperty:d3014",
+      "value": "N"
+    }
+  ],
+
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SDMX/master/context.jsonld"
+  ]
+}
