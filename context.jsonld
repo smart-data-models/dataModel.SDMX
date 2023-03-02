@@ -1,5 +1,6 @@
 {
     "@context": {
+        "Observation": "https://smartdatamodels.org/dataModel.SDMX/Observation",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
