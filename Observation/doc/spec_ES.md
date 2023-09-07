@@ -7,24 +7,31 @@
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descripción global: **Una sola observación en el Cubo SDMX, puede tener uno o más valores medidos asociados**  
+Descripción global: **Una sola observación en el Cubo SDMX, puede tener uno o más valores medidos asociados**.  
 versión: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `confStatus[string]`: Estado de confidencialidad (CONF_STATUS). Esta lista de códigos proporciona información codificada sobre el estado de sensibilidad y confidencialidad de los datos. Los diferentes valores se definen en la Lista de códigos de estado de confidencialidad v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#confStatus](http://purl.org/linked-data/sdmx/2009/code#confStatus)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dataset[string]`: Representa una colección de observaciones que se ajustan a una estructura dimensional común.  . Model: [http://purl.org/linked-data/cube#Dataset](http://purl.org/linked-data/cube#Dataset)- `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `decimals[number]`: Proporciona una lista de valores que muestra el número de dígitos decimales utilizados en los datos. Los diferentes valores se definen en la lista de códigos decimales v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#decimals](http://purl.org/linked-data/sdmx/2009/code#decimals)- `description[string]`: Una descripción de este artículo  - `dimensions[array]`: Esta propiedad contiene la lista de dimensiones identificadas por su clave y valor.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `freq[string]`: Esta lista de códigos proporciona un conjunto de valores que indican la "frecuencia" de los datos (por ejemplo, semanal, mensual, trimestral). El concepto "frecuencia" puede referirse a varias etapas del proceso de producción, por ejemplo, la recopilación de datos o la difusión de los mismos. Por ejemplo, una serie temporal podría difundirse con una frecuencia anual, pero los datos subyacentes se recopilan mensualmente. La lista de códigos es aplicable a todos los diferentes usos de "frecuencia". Los diferentes valores se definen en el multiplicador de unidades v1.1 (https://sdmx.org/wp-content/uploads/CL_FREQ-2.1_February_2021.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#freq](http://purl.org/linked-data/sdmx/2009/dimension#freq)- `id[*]`: Identificador único de la entidad  - `identifier[string]`: Esta propiedad contiene un nombre dado al Dataset.  . Model: [dct:identifier](dct:identifier)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `obsStatus[string]`: Esta lista de códigos proporciona información codificada sobre el estado de una observación (con respecto a eventos como los reflejados en los códigos que componen la lista de códigos). Los diferentes valores se definen en la Lista de Códigos de Estado de Observación v2.2 (https://sdmx.org/wp-content/uploads/CL_OBS_STATUS_v2_2.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#obsStatus](http://purl.org/linked-data/sdmx/2009/code#obsStatus)- `obsValue[*]`: El valor de una variable concreta en un periodo determinado.  . Model: [http://purl.org/linked-data/sdmx/2009/measure#obsValue](http://purl.org/linked-data/sdmx/2009/measure#obsValue)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refArea[string]`: El país o la zona geográfica a la que se refiere el fenómeno estadístico medido. Los diferentes valores se definen con base en Reference Area v2.0 (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#refArea](http://purl.org/linked-data/sdmx/2009/dimension#refArea)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `timePeriod[string]`: El periodo de tiempo o punto en el tiempo al que se refiere la observación medida. La medición representada por cada observación corresponde a un punto específico en el tiempo (por ejemplo, un solo día) o a un período (por ejemplo, un mes, un año fiscal o un año natural). Esto se utiliza como un sello de tiempo y es de particular importancia para los datos de series temporales. En los casos en los que el periodo de tiempo real de los datos difiere del periodo de referencia objetivo, "periodo de tiempo" se refiere al periodo real.  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#timePeriod](http://purl.org/linked-data/sdmx/2009/dimension#timePeriod)- `title[string]`: Esta propiedad contiene el identificador principal de la Observación, el URI.  . Model: [dct:title](dct:title)- `type[string]`: Tipo de entidad NGSI. Tiene que ser Observación  - `unitMult[number]`: Proporcionar valores de código para indicar la magnitud en las unidades de medida. En notación científica, se expresa como diez elevado a la potencia del número. Los diferentes valores se definen en base a Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#unitMult](http://purl.org/linked-data/sdmx/2009/code#unitMult)<!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localidad en la que se encuentra la dirección postal, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, gestiona el gobierno local    
+	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `confStatus[string]`: Estado de confidencialidad (CONF_STATUS). Esta lista de códigos proporciona información codificada sobre el estado de sensibilidad y confidencialidad de los datos. Los diferentes valores se definen en la lista de códigos Confidentially Status v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#confStatus](http://purl.org/linked-data/sdmx/2009/code#confStatus)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dataset[string]`: Representa una colección de observaciones que se ajustan a una estructura dimensional común.  . Model: [http://purl.org/linked-data/cube#Dataset](http://purl.org/linked-data/cube#Dataset)- `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `decimals[number]`: Proporciona una lista de valores que muestran el número de dígitos decimales utilizados en los datos. Los distintos valores se definen en Code List Decimals v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#decimals](http://purl.org/linked-data/sdmx/2009/code#decimals)- `description[string]`: Descripción de este artículo  - `dimensions[array]`: Esta propiedad contiene la lista de dimensiones identificadas por su clave y su valor  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `freq[string]`: Esta lista de códigos proporciona un conjunto de valores que indican la "frecuencia" de los datos (por ejemplo, semanal, mensual, trimestral). El concepto "frecuencia" puede referirse a varias etapas del proceso de producción, por ejemplo, la recopilación o la difusión de datos. Por ejemplo, una serie temporal podría difundirse con una frecuencia anual, pero los datos subyacentes se recopilan mensualmente. La lista de códigos es aplicable a todos los diferentes usos de "frecuencia". Los distintos valores se definen en el multiplicador unitario v1.1 (https://sdmx.org/wp-content/uploads/CL_FREQ-2.1_February_2021.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#freq](http://purl.org/linked-data/sdmx/2009/dimension#freq)- `id[*]`: Identificador único de la entidad  - `identifier[string]`: Esta propiedad contiene un nombre dado al Dataset  . Model: [dct:identifier](dct:identifier)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `obsStatus[string]`: Esta lista de códigos proporciona información codificada sobre el estado de una observación (con respecto a eventos como los reflejados en los códigos que componen la lista de códigos). Los diferentes valores se definen en la Lista de Códigos de Estado de Observación v2.2 (https://sdmx.org/wp-content/uploads/CL_OBS_STATUS_v2_2.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#obsStatus](http://purl.org/linked-data/sdmx/2009/code#obsStatus)- `obsValue[*]`: El valor de una variable concreta en un periodo determinado  . Model: [http://purl.org/linked-data/sdmx/2009/measure#obsValue](http://purl.org/linked-data/sdmx/2009/measure#obsValue)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `refArea[string]`: País o zona geográfica a la que se refiere el fenómeno estadístico medido. Los distintos valores se definen en Reference Area v2.0 (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#refArea](http://purl.org/linked-data/sdmx/2009/dimension#refArea)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `timePeriod[string]`: Periodo de tiempo o punto en el tiempo al que se refiere la observación medida. La medida representada por cada observación corresponde a un punto específico en el tiempo (por ejemplo, un solo día) o a un periodo (por ejemplo, un mes, un año fiscal o un año natural). Esto se utiliza como marca de tiempo y es de particular importancia para los datos de series temporales. En los casos en los que el periodo de tiempo real de los datos difiere del periodo de referencia objetivo, "periodo de tiempo" se refiere al periodo real  . Model: [http://purl.org/linked-data/sdmx/2009/dimension#timePeriod](http://purl.org/linked-data/sdmx/2009/dimension#timePeriod)- `title[uri]`: Esta propiedad contiene el identificador principal de la Observación, el URI  . Model: [dct:title](dct:title)- `type[string]`: Tipo de entidad NGSI. Tiene que ser Observación  - `unitMult[number]`: Proporcionar valores de código para indicar la magnitud en las unidades de medida. En notación científica, se expresa como la decena elevada a la potencia del número. Los diferentes valores se definen basándose en Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx)  . Model: [http://purl.org/linked-data/sdmx/2009/code#unitMult](http://purl.org/linked-data/sdmx/2009/code#unitMult)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Este modelo de datos se ha generado para permitir la transformación de la Observación SDMX-IM representada en RDF Turtle en formato JSON-LD para ser consumida por los brokers ETSI NGSI-LD.  
+Este modelo de datos ha sido generado para permitir la transformación de la Observación SDMX-IM representada en RDF Turtle a formato JSON-LD para ser consumida por los brokers ETSI NGSI-LD.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -36,29 +43,51 @@ Observation:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -94,33 +123,37 @@ Observation:
         model: "http://purl.org/linked-data/sdmx/2009/code#confStatus"    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dataset:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Represents a collection of observations, conforming to some common dimensional structure.'    
+          x-ngsi:    
+            type: Property    
+      description: 'Represents a collection of observations, conforming to some common dimensional structure'    
       type: string    
       x-ngsi:    
         model: "http://purl.org/linked-data/cube#Dataset"    
         type: Relationship    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -139,7 +172,7 @@ Observation:
       x-ngsi:    
         type: Property    
     dimensions:    
-      description: This property contains the list of dimensions identified by its key and value.    
+      description: This property contains the list of dimensions identified by its key and value    
       items:    
         properties:    
           key:    
@@ -159,20 +192,24 @@ Observation:
         model: "http://purl.org/linked-data/sdmx/2009/dimension#freq"    
         type: Property    
     id:    
-      anyOf: &observation_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     identifier:    
-      description: This property contains a name given to the Dataset.    
+      description: This property contains a name given to the Dataset    
       type: string    
       x-ngsi:    
         model: dct:identifier    
@@ -180,7 +217,7 @@ Observation:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: Geoproperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -201,7 +238,9 @@ Observation:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: Geoproperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -225,7 +264,9 @@ Observation:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: Geoproperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -251,7 +292,9 @@ Observation:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: Geoproperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -274,7 +317,9 @@ Observation:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: Geoproperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -300,7 +345,9 @@ Observation:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: Geoproperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -328,10 +375,12 @@ Observation:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
-        type: Geoproperty    
+        type: GeoProperty    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -363,7 +412,7 @@ Observation:
         model: "http://purl.org/linked-data/sdmx/2009/code#obsStatus"    
         type: Property    
     obsValue:    
-      description: The value of a particular variable at a particular period.    
+      description: The value of a particular variable at a particular period    
       oneOf:    
         - type: string    
         - type: number    
@@ -373,8 +422,22 @@ Observation:
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *observation_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -397,18 +460,18 @@ Observation:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     timePeriod:    
-      description: 'The period of time or point in time to which the measured observation refers. The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, “time period” refers to the actual period.'    
+      description: 'The period of time or point in time to which the measured observation refers. The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, “time period” refers to the actual period'    
       type: string    
       x-ngsi:    
         model: "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod"    
         type: Property    
     title:    
-      description: 'This property contains the main identifier for the Observation, the URI.'    
+      description: 'This property contains the main identifier for the Observation, the URI'    
       format: uri    
       type: string    
       x-ngsi:    
@@ -447,7 +510,7 @@ Observation:
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Observación NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de una Observación en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de una Observación en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -518,7 +581,7 @@ Observation:
 ```  
 </details>  
 #### Observación NGSI-v2 normalizada Ejemplo  
-Aquí hay un ejemplo de una Observación en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de una Observación en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -625,7 +688,7 @@ Observation:
 ```  
 </details>  
 #### Observación NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de una Observación en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de una Observación en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -811,7 +874,7 @@ Observation:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
