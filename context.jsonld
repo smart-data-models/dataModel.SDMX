@@ -7,7 +7,15 @@
         "addressRegion": "https://smartdatamodels.org/addressRegion",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "confStatus": "sdmx-attribute:confStatus",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dataset": {
             "@container": "@index",
@@ -22,6 +30,7 @@
         "freq": "sdmx-dimension:freq",
         "id": "@id",
         "identifier": "dct:identifier",
+        "key": "ngsi-ld:hasKey",
         "location": "ngsi-ld:location",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
@@ -38,6 +47,7 @@
         "timePeriod": "sdmx-dimension:timePeriod",
         "title": "http://purl.org/dc/terms/title",
         "type": "@type",
-        "unitMult": "sdmx-attribute:unitMult"
+        "unitMult": "sdmx-attribute:unitMult",
+        "value": "ngsi-ld:hasValue"
     }
 }
