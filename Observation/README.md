@@ -24,6 +24,8 @@ Link alla [specifica](https://github.com/smart-data-models/dataModel.SDMX/blob/m
 [仕様へのリンク](https://github.com/smart-data-models/dataModel.SDMX/blob/master/Observation/doc/spec_JA.md)
 
 [链接到规范](https://github.com/smart-data-models/dataModel.SDMX/blob/master/Observation/doc/spec_ZH.md)
+
+[사양 링크](https://github.com/smart-data-models/dataModel.SDMX/blob/master/Observation/doc/spec_KO.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.SDMX/Observation/examples/example.json) (keyvalues) for NGSI v2
