@@ -18,8 +18,8 @@
     "value": "F"
   },
   "decimals": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "obsStatus": {
     "type": "Text",
@@ -46,7 +46,7 @@
     "value": 3016.9
   },
   "dimensions": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "key": "urn:ngsi-ld:DimensionProperty:d3002",
