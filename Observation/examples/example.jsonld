@@ -62,7 +62,6 @@
       "value": "N"
     }
   ],
-
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.SDMX/master/context.jsonld"
   ]
