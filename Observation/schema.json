@@ -1,13 +1,11 @@
 {
-  "$schema": "http://json-schema.org/schema",
-  "$schemaVersion": "0.0.1",
-  "$id": "https://smart-data-models.github.io/SDMX/Observation/schema.json",
-  "title": "Smart Data models - SDMX Observation schema",
-  "modelTags": "Interstat",
-  "description": "A single observation in the SDMX Cube, may have one or more associated measured values",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.3.4",
+  "modelTags": "IUDX",
+  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
+  "title": "Weather Observed schema - Smart Data Models",
+  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
   "type": "object",
-  "derivedFrom": "https://raw.githubusercontent.com/UKGovLD/publishing-statistical-data/master/specs/src/main/vocab/cube.ttl",
-  "license": "http://www.opendatacommons.org/licenses/pddl/1.0",
   "allOf": [
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
@@ -16,41 +14,61 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
+      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
+    },
+    {
       "properties": {
         "type": {
           "type": "string",
           "enum": [
-            "Observation"
+            "WeatherObserved"
           ],
-          "description": "Property. NGSI entity type. It has to be Observation"
+          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
         },
-        "title": {
-          "type": "string",
-          "description": "Property. Model:'dct:title'. This property contains the main identifier for the Observation, the URI",
-          "format": "uri"
+        "dateObserved": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
         },
-        "identifier": {
-          "type": "string",
-          "description": "Property. Model:'dct:identifier'. This property contains a name given to the Dataset"
+        "precipitation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
         },
-        "dimensions": {
-          "type": "array",
-          "description": "Property. Model:'https://schema.org/StructuredValue'. This property contains the list of dimensions identified by its key and value",
-          "items": {
-            "type": "object",
-            "properties": {
-              "key": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
+        "solarRadiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
+        },
+        "directIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
+        },
+        "diffuseIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
+        },
+        "pressureTendency": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "falling",
+                "raising",
+                "steady"
+              ]
+            },
+            {
+              "type": "number"
             }
-          }
+          ],
+          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
         },
-        "dataset": {
-          "type": "string",
-          "description": "Relationship. Model:'http://purl.org/linked-data/cube#Dataset'. Represents a collection of observations, conforming to some common dimensional structure",
+        "dewPoint": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
+        },
+        "refDevice": {
           "anyOf": [
             {
               "type": "string",
@@ -64,93 +82,64 @@
               "format": "uri",
               "description": "Property. Identifier format of any NGSI entity"
             }
-          ]
-        },
-        "confStatus": {
-          "type": "string",
-          "enum": [
-            "F",
-            "N",
-            "C",
-            "D",
-            "S",
-            "A",
-            "O",
-            "T",
-            "G",
-            "M",
-            "E",
-            "P"
           ],
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/code#confStatus'. Confidentiality Status (CONF_STATUS). This code list provides coded information about the sensitivity and confidentiality status of the data. The different values are defined based in Code List Confidentially Status v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)"
+          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
         },
-        "decimals": {
+        "streamGauge": {
           "type": "number",
           "minimum": 0,
-          "maximum": 15,
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/code#decimals'. Provide a list of values showing the number of decimal digits used in the data. The different values are defined based in Code List Decimals v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)"
+          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
         },
-        "obsStatus": {
-          "type": "string",
-          "enum": [
-            "A",
-            "B",
-            "D",
-            "E",
-            "F",
-            "G",
-            "I",
-            "K",
-            "W",
-            "O",
-            "M",
-            "P",
-            "S",
-            "L",
-            "H",
-            "Q",
-            "J",
-            "N",
-            "U",
-            "V"
-          ],
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/code#obsStatus'. This code list provides coded information about the \"status\" of an observation (with respect events such as the ones reflected in the codes composing the code list). The different values are defined based in Code List Observation Status v2.2 (https://sdmx.org/wp-content/uploads/CL_OBS_STATUS_v2_2.docx)"
-        },
-        "unitMult": {
+        "snowHeight": {
           "type": "number",
           "minimum": 0,
-          "maximum": 13,
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/code#unitMult'. Provide code values for indicating the magnitude in the units of measurements. In scientific notation, expressed as ten raised to the power of the number. The different values are defined based in Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx)"
+          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
         },
-        "freq": {
+        "uVIndexMax": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
+        },
+        "aqiMajorPollutant": {
           "type": "string",
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/dimension#freq'. This code list provides a set of values indicating the 'frequency' of the data (e.g. weekly, monthly, quarterly). The concept \u201cfrequency\u201d may refer to various stages in the production process, e.g. data collection or data dissemination. For example, a time series could be disseminated at annual frequency, but the underlying data are compiled monthly. The code list is applicable for all different uses of \u201cfrequency\u201d. The different values are defined based in Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_FREQ-2.1_February_2021.docx)",
-          "pattern": "^_[OUZ]|[SQBNI]|OA|OM|[AMWDH]_*[0-9]*$"
+          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
         },
-        "refArea": {
+        "aqiMajorPollutantForecast": {
           "type": "string",
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/dimension#refArea'. The country or geographic area to which the measured statistical phenomenon relates. The different values are defined based in Reference Area v2.0 (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)"
+          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
         },
-        "timePeriod": {
-          "type": "string",
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/dimension#timePeriod'. The period of time or point in time to which the measured observation refers. The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, \u201ctime period\u201d refers to the actual period"
+        "airTemperatureForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
         },
-        "obsValue": {
-          "description": "Property. Model:'http://purl.org/linked-data/sdmx/2009/measure#obsValue'. The value of a particular variable at a particular period",
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "number"
-            }
-          ]
+        "precipitationForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
+        },
+        "airQualityIndex": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
+        },
+        "relativeHumidityForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
+        },
+        "airQualityIndexForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
+        },
+        "airTemperatureTSA": {
+          "type": "object",
+          "description": "Property. Air temperature time series aggregation",
+          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
         }
       }
     }
   ],
   "required": [
     "id",
-    "type"
+    "type",
+    "dateObserved",
+    "location"
   ]
 }
